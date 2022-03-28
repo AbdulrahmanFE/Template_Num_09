@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- CSS File -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Page icon -->
+    <link rel="icon" type="image/png" href="Images/logo.svg" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <meta 
+    http-equiv="X-UA-Compatible" 
+    content="IE=edge"
+    />
+    <meta 
+    name="viewport" 
+    content="width=device-width, initial-scale=1.0"
+    />
+    <meta 
+    name="description" 
+    content="Practice Front-End"
+    />
+    <meta name="Gonex" content="v1.0" />
+    <title>Gonex</title>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="container">
+        <a href="#" class="logo">
+          <img src="Images/logo.svg" alt="logo" class="logo-img" />
+        </a>
+        <nav class="header-nav">
+          <input type="checkbox" id="bars" class="check" />
+          <label for="bars" class="bars">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <ul class="main-nav">
+            <li><a href="#home">home</a></li>
+            <li><a href="#services">services</a></li>
+            <li><a href="#work">work</a></li>
+            <li><a href="#about">about us</a></li>
+            <li><a href="#skills">skills</a></li>
+            <li><a href="#contact">contact us</a></li>
+            <li>
+              <form>
+                <label for="search">
+                  <button class="search-btn" type="submit" aria-label="submit"><i class="fas fa-search"></i></button>
+                </label>
+                <input type="search" name="search" placeholder="Search" class="search" id="search">
+              </form>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Home Section -->
+    <section class="home" id="home">
+      <div class="overlay"></div>
+      <div class="text">
+        <h1 class="home-title">We are gonex</h1>
+        <p class="home-des">
+          Dui aliquam quisque. Nec feugiat ut neque odio quo, proin interdum,
+          quis elit varius et duis, dui augue vehicula nam tinc.
+        </p>
+        <a href="#" class="show btn">Show me more</a>
+      </div>
+      <i class="fa-solid fa-angle-left angle left"></i>
+      <i class="fa-solid fa-angle-right angle right"></i>
+    </section>
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="col-1">
+          <span class="title">What we do</span>
+          <span class="highlight">best</span>
+          <span class="italic">see it for yourself</span>
+        </div>
+        <div class="service-box">
+          <h2 class="service-title">photography</h2>
+          <p class="service-des">Nec feugiat ut neque odio quo, interdum, quis elit varius.</p>
+          <a href="#" class="service-link">see projects</a>
+        </div>
+        <div class="service-box">
+          <h2 class="service-title">graphic design</h2>
+          <p class="service-des">Nec feugiat ut neque odio quo, interdum, quis elit varius.</p>
+          <a href="#" class="service-link">see projects</a>
+        </div>
+        <div class="service-box">
+          <h2 class="service-title">app development</h2>
+          <p class="service-des">Nec feugiat ut neque odio quo, interdum, quis elit varius.</p>
+          <a href="#" class="service-link">see projects</a>
+        </div>
+        <div class="service-box">
+          <h2 class="service-title">programming</h2>
+          <p class="service-des">Nec feugiat ut neque odio quo, interdum, quis elit varius.</p>
+          <a href="#" class="service-link">see projects</a>
+        </div>
+        <div class="service-box">
+          <h2 class="service-title">web coding</h2>
+          <p class="service-des">Nec feugiat ut neque odio quo, interdum, quis elit varius.</p>
+          <a href="#" class="service-link">see projects</a>
+        </div>
+      </div>
+    </section>
+    <!-- Video Section -->
+    <section class="video-section">
+      <div class="container">
+        <div class="video-content">
+          <img src="Images/logo.svg" alt="logo" title="Gonex logo" class="logo">
+          <h2 class="video-title">show me the video</h2>
+          <p class="video-des">Just hit play and relax...</p>
+        </div>
+      </div>
+      <div class="video-container">
+        <video controls preload="none" poster="Images/transparent.png">
+          <source src="" type="video/mp4">
+          <source src="" type="video/ogg">
+        </video>
+      </div>
+      <div class="video-controls">
+        <div class="progress-container">
+          <progress min="0" value="0" class="video-progress"></progress>
+        </div>
+        <ul class="controls-left">
+          <li class="volume-control">
+            <button type="button" aria-label="volume">
+              <i class="fa-solid fa-volume-low" aria-hidden="true"></i>
+            </button>
+            <div class="volume-slider">
+              <input type="range" name="range" min="0" max="2" step="0.01" class="volume-bar">
+            </div>
+          </li>
+          <li class="video-timer">
+            <span>0:00</span> / <span>0:00</span>
+          </li>
+        </ul>
+        <ul class="controls-mid">
+          <li>
+            <button type="button" aria-label="backward">
+              <i class="fa-solid fa-backward" aria-hidden="true"></i>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="play" aria-label="play">
+              <i class="fa-solid fa-play" aria-hidden="true"></i>
+            </button>
+          </li>
+          <li>
+            <button type="button" aria-label="forward">
+              <i class="fa-solid fa-forward" aria-hidden="true"></i>
+            </button>
+          </li>
+        </ul>
+        <ul  class="share">
+          <li>
+            <input type="checkbox" id="share" class="check-share">
+            <label for="share" class="label-share">
+              <i class="fa-solid fa-share-nodes share-icon" title="Share Social"></i>
+            </label>
+            <div class="share-video">
+              <a href="#" title="Facebook" style="--color: #1877F2;"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" title="Twitter" style="--color: #1DA1F2;"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#" title="Google" style="--color: #db4a39;"><i class="fa-brands fa-google-plus-g"></i></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- Work Section -->
+    <section class="work" id="work">
+      <div class="container">
+        <div class="section-heading">
+          <h2 class="section-title">works</h2>
+          <p class="section-des">
+            Dui aliquam quisque. Nec feugiat ut neque odio quo, proin interdum, 
+						quis elit varius et duis, dui augue vehicula nam tinc.
+          </p>
+        </div>
+        <div class="filters">
+          <div class="filter"><button type="button" aria-label="all">all</button></div>
+          <div class="filter"><button type="button" aria-label="photography">photography</button></div>
+          <div class="filter"><button type="button" aria-label="graphic design">graphic design</button></div>
+          <div class="filter"><button type="button" aria-label="app">App</button></div>
+          <div class="filter"><button type="button" aria-label="programming">programming</button></div>
+          <div class="filter"><button type="button" aria-label="web">Web</button></div>
+        </div>
+      </div>
+      <div class="works-container">
+        <div class="col one">
+          <img src="Images/works_01.jpg" alt="" aria-hidden="true">
+          <div class="overlay">
+            <div class="works-content">
+              <h3 class="works-des">awesome image</h3>
+              <p class="likes">
+                <a href="#" title="heart"><i class="fa-regular fa-heart"></i></a>
+                <span class="conunt">76</span> likes
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col two">
+          <img src="Images/works_02.jpg" alt="" aria-hidden="true">
+          <div class="overlay">
+            <div class="works-content">
+              <h3 class="works-des">awesome image</h3>
+              <p class="likes">
+                <a href="#" title="heart"><i class="fa-regular fa-heart"></i></a>
+                <span class="conunt">76</span> likes
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col three">
+          <img src="Images/works_03.jpg" alt="" aria-hidden="true">
+          <div class="overlay">
+            <div class="works-content">
+              <h3 class="works-des">awesome image</h3>
+              <p class="likes">
+                <a href="#" title="heart"><i class="fa-regular fa-heart"></i></a>
+                <span class="conunt">76</span> likes
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col four">
+          <img src="Images/works_04.jpg" alt="" aria-hidden="true">
+          <div class="overlay">
+            <div class="works-content">
+              <h3 class="works-des">awesome image</h3>
+              <p class="likes">
+                <a href="#" title="heart"><i class="fa-regular fa-heart"></i></a>
+                <span class="conunt">76</span> likes
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col five">
+          <img src="Images/works_05.jpg" alt="" aria-hidden="true">
+          <div class="overlay">
+            <div class="works-content">
+              <h3 class="works-des">awesome image</h3>
+              <p class="likes">
+                <a href="#" title="heart"><i class="fa-regular fa-heart"></i></a>
+                <span class="conunt">76</span> likes
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col six">
+          <img src="Images/works_06.jpg" alt="" aria-hidden="true">
+          <div class="overlay">
+            <div class="works-content">
+              <h3 class="works-des">awesome image</h3>
+              <p class="likes">
+                <a href="#" title="heart"><i class="fa-regular fa-heart"></i></a>
+                <span class="conunt">76</span> likes
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <h2 class="section-title">about us</h2>
+          <h3 class="sub-title">some simple word about our company</h3>
+          <p class="about-des">
+            Ad graeci omnium minimum sit, augue discere complectitur est te. Mea expetenda intellegebat no, reque signiferumque qui te, ad denique omittam mei. Veri numquam inciderint pri ad, saepe essent ut sea, nam ei civibus denique eleifend. Dicat pertinax ut vix,
+            mazim platonem ea has. Partiendo intellegam ex eos, eos putant alienum ea. Ut malorum ponderum vituperata eum.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <h2 class="section-title">gonex statistic</h2>
+          <p class="section-des">
+            Dui aliquam quisque. Nec feugiat ut neque odio quo, proin interdum, 
+						quis elit varius et duis, dui augue vehicula nam tinc.
+          </p>
+        </div>
+        <div class="skills-container">
+          <div class="skill">
+            <h3 class="lang">photography</h3>
+            <div class="prog-holder">
+              <span class="prog" style="width: 93%" data-progress="93%"></span>
+            </div>
+          </div>
+          <div class="skill">
+            <h3 class="lang">graphic design</h3>
+            <div class="prog-holder">
+              <span class="prog" style="width: 95%" data-progress="95%"></span>
+            </div>
+          </div>
+          <div class="skill">
+            <h3 class="lang">app</h3>
+            <div class="prog-holder">
+              <span class="prog" style="width: 75%" data-progress="75%"></span>
+            </div>
+          </div>
+          <div class="skill">
+            <h3 class="lang">programming</h3>
+            <div class="prog-holder">
+              <span class="prog" style="width: 53%" data-progress="53%"></span>
+            </div>
+          </div>
+          <div class="skill">
+            <h3 class="lang">web</h3>
+            <div class="prog-holder">
+              <span class="prog" style="width: 84%" data-progress="84%"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <form class="contact-form">
+          <input type="email" name="email" placeholder="email address" required class="input-email">
+          <button class="sub btn" type="submit" aria-label="submit">subscribe</button>
+        </form>
+        <div class="contact-info">
+          <div class="box-contact">
+            <a href="tel:998-776-54321098">
+              <img class="icon" src="Images/phone.png" alt="Phone Icon">
+              <span class="info">998 776 54321098</span>
+            </a>
+          </div>
+          <div class="box-contact">
+            <a href="mailto:gonex@mail.com">
+              <img class="icon" src="Images/mail.png" alt="Mail Icon">
+              <span class="info">gonex@mail.com</span>
+            </a>
+          </div>
+          <div class="box-contact">
+            <a href="#">
+              <img class="icon" src="Images/map.png" alt="Map Icon">
+              <span class="info">787 Gonex Avenue, New York</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-social">
+          <a href="#" title="Facebook" style="--color: #1877F2;"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" title="Twitter" style="--color: #1DA1F2;"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" title="Dribble" style="--color: #ea4c89;"><i class="fa-brands fa-dribbble"></i></a>
+          <a href="#" title="Google" style="--color: #db4a39;"><i class="fa-brands fa-google-plus-g"></i></a>
+          <a href="#" title="Youtube" style="--color: red;"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer>
+      <p class="copyright">&copy; 2022 - gonex all rights reserved</p>
+      <p class="coded">coded by <a href="https://github.com/AbdulrahmanFE" class="author">ABDULRAHMAN FE</a></p>
+    </footer>
+  </body>
+</html>
