@@ -100,8 +100,8 @@
   header .check {
     display: none;
   }
-  header .check + .bars {
-    width: 26px;
+  header .check + .burger {
+    width: 30px;
     height: 18px;
     position: absolute;
     top: 50%;
@@ -109,64 +109,64 @@
     right: 15px;
     cursor: pointer;
   }
-  header .check + .bars span {
+  header .check + .burger span {
     width: 100%;
     height: 4px;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 4px;
     position: absolute;
-    left: 0;
+    right: 0;
     transition: var(--MainTransition);
   }
-  header .check + .bars span:first-child {
+  header .check + .burger span:first-child {
     top: 0;
   }
-  header .check:checked + .bars span:first-child { /* :Checked */
+  header .check:checked + .burger span:first-child { /* :Checked */
     background-color: #57c654;
     top: 50%;
     transform: rotate(45deg);
   }
-  header .check + .bars span:nth-child(2) {
+  header .check + .burger span:nth-child(2) {
     top: 50%;
     transform: translateY(-50%);
   }
-  header .check:checked + .bars span:nth-child(2) { /* :Checked */
+  header .check:checked + .burger span:nth-child(2) { /* :Checked */
     display: none;
   }
-  header .check + .bars span:last-child {
+  header .check + .burger span:last-child {
     bottom: 0;
   }
-  header .check:checked + .bars span:last-child { /* :Checked */
+  header .check:checked + .burger span:last-child { /* :Checked */
     background-color: #57c654;
     top: 50%;
     transform: rotate(-45deg);
   }
-  header .main-nav {
+  header .main-nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  header .main-nav a,
-  header .main-nav i {
+  header .main-nav ul a,
+  header .main-nav ul .search-btn i {
     font-size: 12px;
     color: #FFF;
     transition: var(--MainTransition);
   }
-  header .main-nav a:hover,
-  header .main-nav .search-btn:hover i {
+  header .main-nav ul a:hover,
+  header .main-nav ul .search-btn:hover i {
     color: var(--MainColor);
   }
-  header .main-nav a {
+  header .main-nav ul a {
     padding: 32px 25px;
     display: block;
     text-transform: uppercase;
   }
-  header .main-nav form {
+  header .main-nav ul form {
     overflow: hidden;
     padding: 22px 0;
     display: flex;
   }
-  header .main-nav .search-btn {
+  header .main-nav ul .search-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -176,7 +176,7 @@
     border: 1px solid transparent;
     cursor: pointer;
   }
-  header .main-nav .search {
+  header .main-nav ul .search {
     background: none;
     border: none;
     border-bottom: 1px solid transparent;
@@ -191,19 +191,19 @@
     cursor: text;
     transition: var(--MainTransition);
   }
-  header .main-nav form:hover .search {
+  header .main-nav ul form:hover .search {
     visibility: visible;
     opacity: 1;
     width: 200px;
   }
-  header .main-nav .search:focus {
+  header .main-nav ul .search:focus {
     outline: none;
   }
-  header .main-nav .search::placeholder {
+  header .main-nav ul .search::placeholder {
     color: #757575;
     font-style: italic;
   }
-  header .main-nav .search::-webkit-search-cancel-button {
+  header .main-nav ul .search::-webkit-search-cancel-button {
     -webkit-appearance: none;
     appearance: none;
     height: 10px;
@@ -212,20 +212,20 @@
   }
 /* ----- Making The Header Section Responsive ----- */
   @media (min-width: 768px) {
-    header .check + .bars {
+    header .check + .burger {
       display: none;
     }
   }
   @media (max-width: 991px) {
-    header .main-nav a {
+    header .main-nav ul a {
       padding: 32px 16px;
     }
-    header .main-nav form:hover .search {
+    header .main-nav ul form:hover .search {
       width: 100px;
     }
   }
   @media (max-width: 767px) {
-    header .main-nav {
+    header .main-nav ul {
       position: absolute;
       left: 0;
       top: 100%;
@@ -238,63 +238,65 @@
       background-color: #161718;
       max-height: 450px;
       opacity: 0;
-      z-index: -111;
+      visibility: hidden;
+      z-index: -11;
       transition: var(--MainTransition);
     }
-    header .check:checked ~ .main-nav {
+    header .main-nav .check:checked ~  ul {
       opacity: 1;
-      z-index: 111;
+      visibility: visible;
+      z-index: 11;
     }
-    header .main-nav a {
+    header .main-nav ul a {
       padding: 20px;
     }
-    header .main-nav li:not(:last-child, :nth-child(6)) {
+    header .main-nav ul li:not(:last-child, :nth-child(6)) {
       border-bottom: 1px solid #222;
       width: 100%;
       text-align: center;
     }
-    header .main-nav li:first-child {
+    header .main-nav ul li:first-child {
       order: 2;
     }
-    header .main-nav li:nth-child(2) {
+    header .main-nav ul li:nth-child(2) {
       order: 3;
     }
-    header .main-nav li:nth-child(3) {
+    header .main-nav ul li:nth-child(3) {
       order: 4;
     }
-    header .main-nav li:nth-child(4) {
+    header .main-nav ul li:nth-child(4) {
       order: 5;
     }
-    header .main-nav li:nth-child(5) {
+    header .main-nav ul li:nth-child(5) {
       order: 6;
     }
-    header .main-nav li:nth-child(6) {
+    header .main-nav ul li:nth-child(6) {
       order: 7;
     }
-    header .main-nav li:last-child {
+    header .main-nav ul li:last-child {
       order: 1;
       width: calc(100% - 50px);
       border-bottom: 1px solid #2e2f30;
       margin-bottom: 8px;
     }
-    header .main-nav form {
+    header .main-nav ul form {
       flex-direction: row-reverse;
     }
-    header .main-nav .search-btn {
+    header .main-nav ul .search-btn {
       background-color: var(--MainColor);
       width: 45px;
       height: 45px;
     }
-    header .main-nav .search-btn:hover {
+    header .main-nav ul .search-btn:hover {
       background-color: #FFF;
     }
-    header .main-nav .search {
+    header .main-nav ul .search {
       opacity: 1;
       visibility: visible;
       padding: 12px;
       width: 100% !important;
     }
-    header .main-nav .search:focus {
+    header .main-nav ul .search:focus {
       border-bottom: 1px solid var(--MainColor);
     }
   }
@@ -347,7 +349,6 @@
   }
   .home .angle {
     font-size: 26px;
-    width: 8%;
     color: #FFF;
     position: absolute;
     top: 50%;
@@ -358,11 +359,10 @@
     color: var(--MainColor);
   }
   .home .angle.left {
-    left: 0;
-    text-align: right;
+    left: 75px;
   }
   .home .angle.right {
-    right: 0;
+    right: 75px;
   }
 /* Styling The Services Section */
   .services {
@@ -404,6 +404,7 @@
     background-color: #1b1b1b;
     text-align: center;
     padding: 80px 40px 60px;
+    border-radius: 2px;
     cursor: pointer;
     margin: 0 auto;
     max-width: 360px;
@@ -417,7 +418,7 @@
     left: 50%;
     transform: translateX(-50%);
     height: 0;
-    width: 0;
+    width: 100%;
     background-color: #111;
     z-index: -1;
     transition: 0.6s ease-in-out;
@@ -430,7 +431,6 @@
   }
   .services .service-box:hover::before,
   .services .service-box:hover::after {
-    width: 100%;
     height: 50%;
   }
   .services .service-title {
@@ -555,7 +555,7 @@
     color: #FFF;
     transition: var(--MainTransition);
   }
-  .video-section .video-controls i:hover {
+  .video-section .video-controls i:not(.share-icon):hover {
     color: var(--MainAltColor);
   }
   .video-section .video-progress {
@@ -707,7 +707,7 @@
     color: #FFF;
     transition: var(--MainTransition);
   }
-  .video-section .share-video a:hover i {
+  .video-section .video-controls .share-video a:hover i {
     color: var(--color);
   }
 /* ----- Making The Video Section Responsive ----- */
@@ -765,6 +765,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 30px;
     margin-top: 50px;
   }
@@ -772,40 +773,23 @@
     background: transparent;
     border: none;
     color: #55565b;
-    padding: 14px 6px;
+    padding: 14px 6px 10px;
+    font-weight: 600;
     cursor: pointer;
     text-transform: uppercase;
     position: relative;
     transition: var(--MainTransition);
   }
-  section.work .filter:first-of-type > button,
-  section.work .filter > button:hover {
-    color: var(--MainColor);
-  }
-  section.work .filter > button::before,
   section.work .filter > button::after {
     content: "";
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    transition: var(--MainTransition);
-  }
-  section.work .filter > button::before {
-    top: 0;
-    background-color: #111;
-    width: 100%;
-    height: 0;
-    z-index: -1;
-  }
-  section.work .filter:first-of-type > button::before,
-  section.work .filter > button:hover::before {
-    height: calc(100% - 3px);
-  }
-  section.work .filter > button::after {
     bottom: 0;
-    background-color: var(--MainColor);
+    background-color: var(--MainAltColor);
     height: 3px;
     width: 0;
+    transition: var(--MainTransition);
   }
   section.work .filter:first-of-type > button::after,
   section.work .filter > button:hover::after {
@@ -901,9 +885,6 @@
     }
   }
   @media (max-width: 991px) {
-    section.work .filters {
-      flex-direction: column;
-    }
     section.work .works-container {
       grid-template-columns: 50% 50%;
     }
@@ -1019,11 +1000,14 @@
     background-color: #444;
   }
 /* ----- Making The Skills Section Responsive ----- */
-  @media (max-width: 575px) {
+  @media (max-width: 525px) {
     section.skills .skill .prog::before {
-      font-size: 16px;
-      right: -22px;
+      font-size: 14px;
+      right: -20px;
       bottom: 23px;
+    }
+    section.skills .skill .lang {
+      font-size: 14px;
     }
   }
 /* Styling The Contact Section */
@@ -1101,14 +1085,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 14px;
-    color: #999;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    color: #666;
+    border: 1px solid #555;
+    border-radius: 50%;
     transition: var(--MainTransition);
   }
   section.contact .contact-social > a:hover {
     color: white;
     background-color: var(--color);
+    border-color: var(--color);
+    transform: rotate(1turn);
   }
 /* ----- Making The Contact Section Responsive ----- */
   @media (max-width: 991px) {
@@ -1137,7 +1123,7 @@
     background-color: #000;
     text-align: center;
     padding: 25px 0;
-    border-top: 1px solid #444;
+    border-top: 1px solid #333;
     text-transform: capitalize;
   }
   footer .copyright {
